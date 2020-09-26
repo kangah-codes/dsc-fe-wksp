@@ -19,9 +19,11 @@ function createUser(ev) {
     .then((res) => res.json())
     .then((json) => {
       console.log(json);
+      history.pushState({}, "", `quizes.html`);
     })
     .catch((er) => {
       console.warn(er);
+      history.pushState({}, "", `quizes.html`);
     });
 }
 
